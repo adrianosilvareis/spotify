@@ -1,0 +1,65 @@
+{
+  "name": "spotify",
+  "version": "1.0.0",
+  "description": "Nossa biblioteca do curso JS com TDD na pratica",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "prepush": "npm run lint && npm run test:coverage",
+    "test": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianosilvareis/spotify.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library"
+  ],
+  "author": "Adriano Reis <adriano_silvareis@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adrianosilvareis/spotify/issues"
+  },
+  "homepage": "https://github.com/adrianosilvareis/spotify#readme",
+  "devDependencies": {
+    "babel-jest": "^22.4.3",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "jest-context": "^2.1.0",
+    "node-fetch": "^2.1.2",
+    "sinon": "^4.5.0",
+    "sinon-chai": "^3.0.0",
+    "sinon-stub-promise": "^4.0.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+    },
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    },
+    "setupFiles": [
+      "jest-context/setup"
+    ]
+  }
+}

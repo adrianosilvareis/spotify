@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+      const pr1 = new Promise(( resolve, reject ) => {
+        setTimeout(() => {
+          reject({name: 'Adriano', age: 28})
+        }, 2000)
+      })
+
+      // pr1
+      //   .then(data => console.log(data), err => console.error(err))
+
+      pr1
+        .then(data => console.log(data))
+        .catch(err => console.error(err))
+
+      async function getPost() {
+        const pr2 = new Promise(( resolve, reject ) => {
+          setTimeout(() => {
+            resolve({name: 'Adriano', age: 28})
+          }, 1000)
+        })
+
+        try {
+          const resolve = await pr2;
+          console.log(resolve)
+        } catch (error) {
+          console.error(error)
+        }
+
+      }
+
+      // getPost();
+
+  </script>
+</body>
+</html>
