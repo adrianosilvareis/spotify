@@ -6,7 +6,7 @@ import sinonChai from 'sinon-chai';
 import sinonStubPromise from 'sinon-stub-promise';
 import context from 'jest-context';
 
-import { search, searchAlbums, searchArtists, searchTracks, searchPlaylist } from '../src/main';
+import { search, searchAlbums, searchArtists, searchTracks, searchPlaylist } from '../src/search';
 
 global.fetch = require('node-fetch');
 
