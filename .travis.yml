@@ -9,6 +9,3 @@ before_script:
   - npm run build:all
 after_success:
   - npm run coveralls
-before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version version-number
-  - export PATH="$HOME/.yarn/bin:$PATH"
