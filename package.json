@@ -12,7 +12,8 @@
     "build:all": "npm run build && npm run build:umd && npm run build:umd:min",
     "lint": "./node_modules/.bin/eslint src/*.js",
     "prepush": "npm run lint && npm run test:coverage",
-    "test": "jest --watch",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
     "test:coverage": "jest --coverage"
   },
   "repository": {
