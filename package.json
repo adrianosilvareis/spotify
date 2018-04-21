@@ -2,9 +2,9 @@
   "name": "spotify-wrapper-aula",
   "version": "1.0.3",
   "description": "Nossa biblioteca do curso JS com TDD na pratica",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "clear": "rimraf lib",
+    "clear": "rimraf lib && rimraf dist && rimraf coverage",
     "build": "npm run clear && babel --out-dir lib src",
     "build:watch": "npm run build -- --watch",
     "build:umd": "./node_modules/.bin/webpack --output-filename spotity-wrapper.umd.js",
@@ -17,6 +17,10 @@
     "test:coverage": "jest --coverage",
     "coveralls": "npm run test:coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
+  "files": [
+    "dist",
+    "lib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/adrianosilvareis/spotify.git"
